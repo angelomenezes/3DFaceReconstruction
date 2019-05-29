@@ -9,10 +9,12 @@ This project aims at the development of a 3D face reconstruction model from a si
 The project can be divided in two steps:
 
 ### 1) Super-Resolution
+
+Super-resolution techniques are going to be applied to the images in order to have enhanced version which could have enough details for the reconstruction step. For this part, different iterative and learning based techniques (e.g., bicubic interpolation, pixel-CNN, SRGAN) are going to be compared based on their peak-signal noise ratio (PSNR) and structural similarity (SSIM)
+
 ### 2) 3D Face Reconstruction
 
-Firstly, super-resolution techniques are going to be applied to the images in order to have enhanced version which could have enough details for the reconstruction step. For this part, different iterative and learning based techniques (e.g., bicubic interpolation, pixel-CNN, SRGAN) are going to be compared based on their peak-signal noise ratio (PSNR) and structural similarity (SSIM). 
-Secondly, the reconstruction phase is going to be applied using models based on volumetric convolutional neural networks for regression of points in the mesh.
+Reconstruction phase is going to be applied using models based on volumetric convolutional neural networks for regression of points in the mesh.
 
 ### Dataset: A low-resolution version of the 300 W-LP dataset (http://www.cbsr.ia.ac.cn/users/xiangyuzhu/projects/3DDFA/main.htm).
 
