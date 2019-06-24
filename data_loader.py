@@ -23,10 +23,6 @@ class FacesWith3DCoords(Dataset):
             self.tf_scale = data_transform.Scale()
 
         for i in os.listdir(images_dir):
-            #name = i.split(".")[0]
-
-            #self.images += [os.path.join(images_dir, name + ".jpg")]
-            #self.volumes += [os.path.join(mats_dir, name + ".mat")]
             
             ext = os.path.splitext(i)[1]
             
@@ -39,8 +35,15 @@ class FacesWith3DCoords(Dataset):
             
             if ext == '.mat':
                 self.volumes += [os.path.join(mats_dir, j)]
-                #if landmarks_dir:    
-                #    self.landmarks += [os.path.join(landmarks_dir, i)]
+        
+        if landmarks_dir:    
+            for j in os.listdir(landmarks_dir):
+                
+                ext = os.path.splitext(j)[1]
+
+                if ext == '.mat':
+                    self.landmarks += [os.path.join(landmarks_dir, i)]
+
 
         assert len(self.images) == len(self.volumes)
 
