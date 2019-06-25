@@ -12,17 +12,18 @@ The work performed in this repository can be divided basically into two phases:
 
 ### 1) Super-Resolution
 
-Super-resolution techniques were applied to a set of low-resolution images in order to have enhanced version that could provide enough details for the following reconstruction step.
-For this stage, different neighboorhood and learning based techniques were compared based on their peak-signal noise ratio (PSNR) and structural similarity (SSIM).
+Super-resolution techniques were applied to a set of low-resolution images in order to have enhanced versions that could provide enough details for the following reconstruction step.
+For the former stage, different neighboorhood and learning based techniques were compared based on their peak-signal noise ratio (PSNR) and structural similarity (SSIM).
 
 ### 2) 3D Face Reconstruction
 
 The reconstruction phase was performed by a learning model based on volumetric convolutional neural networks for regression of feature points in the mesh.
 
-### Dataset: A low-resolution version of the [300 W-LP dataset](http://www.cbsr.ia.ac.cn/users/xiangyuzhu/projects/3DDFA/main.htm).
+### Dataset: 
+A low-resolution version of the [300 W-LP dataset](http://www.cbsr.ia.ac.cn/users/xiangyuzhu/projects/3DDFA/main.htm).
 
 ### Final Results
-[Final_Report.ipynb]()
+[Final_Report.ipynb](https://github.com/angelomenezes/3DFaceReconstruction/blob/master/Final_Report.ipynb)
 
 ### References
 
