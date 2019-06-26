@@ -1,4 +1,4 @@
-# Superresolution using an efficient sub-pixel convolutional neural network
+# Super-resolution using an efficient sub-pixel convolutional neural network
 # https://github.com/pytorch/examples/tree/master/super_resolution
 
 import torch

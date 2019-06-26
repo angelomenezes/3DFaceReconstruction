@@ -15,16 +15,22 @@ from PIL import Image
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-def super_resolve(input_image):
+def super_resolve(input_image, upscale_factor):
     
     test_img = Image.open(input_image).convert('YCbCr')
     y, cb, cr = test_img.split()
 
     test_img = np.array(test_img)
     
-    model = Net(upscale_factor = 4).to(device)
-    model = torch.load("trained_models/super_res_model_epoch_300.pth")
+    model = Net(upscale_factor = upscale_factor).to(device)
     
+    if upscale_factor == 2:
+        model = torch.load("trained_models/super_res_model_epoch_500_64.pth")
+    elif upscale_factor == 4:
+        model = torch.load("trained_models/super_res_model_epoch_300_32.pth")
+    else:
+        raise Exception('Scaling factor must be at the moment 2 or 4!')
+        
     img_to_tensor = ToTensor()
 
     input_ = img_to_tensor(y).view(1, -1, y.size[1], y.size[0])
