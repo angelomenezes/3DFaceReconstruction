@@ -1,5 +1,5 @@
 # 3D face reconstruction from low-resolution images
-#### Angelo Garangau Menezes - N°USP: 11413492
+#### Angelo Garangau Menezes
 
 ### Abstract:
 
